@@ -1,0 +1,354 @@
+
+/* pre style on some elements */
+*{
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+   
+}
+
+img, picture, video, canvas, svg {
+	/*display: inline-block;    maybe this is better ?*/
+    display: block;
+    max-width: 100%;
+   
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+}
+a:hover,a:focus{
+  color: blue;
+}
+a:active{
+  color: green;
+}
+/*utility classes  */
+.curent-page{
+	border-bottom: 1px solid grey;
+	color: red;
+}
+.last-element{
+  margin-bottom: 0;
+}
+.btn { 
+    padding: .4em 1em;
+    border-radius: 2px;
+    margin: .2em;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+.container{
+    width: 100%;
+    margin:auto;
+    max-width: 36em;   
+    /* background-color: blue;  */
+    /* padding: 1em; */
+}
+.hero{
+	width: 100%;
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*use this side of each elemnt that should look deffrent in mobile*/
+@media (max-width:24em){
+    
+} 
+/*start of project css*/
+html, body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* background-color: red; */
+     color: rgba(0,0,0,.8)
+    /*color: rgba(256,256,256,.5)*/
+    
+}
+/*  use this in the head of html to make it work responsivly 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+icon of page
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> 
+<link rel="manifest" href="/site.webmanifest" />
+https://css-tricks.com/how-to-favicon-in-2021/
+*/
+    .theme-color{
+        color: #F18119;
+    }
+    .container { 
+
+    }
+
+    header { 
+        background-image: url(images/dark-ribs.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(256,256,256,1);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+    }
+
+    header .theme-color { 
+
+    }
+
+    header h1 { 
+        padding:0 3em;
+        font-size:2.4rem;
+        
+        font-weight: 100;
+        line-height: 1.1;
+
+    }
+    .header-p1{
+        
+        text-align: center;
+        
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-top: 5px solid #F18119;
+        /* padding:0 3em; */
+        
+        
+    }
+    .header-p2{
+        
+        padding:0 3em;
+        font-size:1.2rem;
+        
+        text-align: center;
+        font-weight: 900;
+      
+        line-height: 1.4;
+        margin: 0 0 1em 0;
+    }
+
+    h1 strong { 
+        font-weight: 900;
+
+    }
+
+    main { 
+        padding: 3em 1em;
+        text-align: center;
+
+    }
+
+    main h2 { 
+        text-align: center;
+        line-height: 1.4;
+
+    }
+
+    main .theme-color { 
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.4;
+        margin: 0 0 1.3em 0;
+
+    }
+
+    main p { 
+        color: rgba(0,0,0,.5);
+        padding: 0 1em;
+        
+
+    }
+
+    main form { 
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        align-items: center;
+
+    }
+
+    form input { 
+        border-radius: 10px;
+        margin: 0 0 .5em 0;
+        border: 2px solid grey;
+        width: 90%;
+        max-width: 250px;
+        text-align: center;
+        
+        
+        
+
+    }
+
+    form .btn { 
+        border-radius: 10px;
+        margin: 0 0 1em 0;
+        color: white;
+        width: 90%;
+        max-width: 250px;
+        
+        background: linear-gradient(to right, #FFA51D , #FF713B );
+        font-weight: 600;
+    }
+    .main-small-p{
+        color:rgba(0,0,0,.3);
+        font-size: .8rem;
+        padding: 0 10em;
+    }
+    .btn-register:hover,
+    .btn-register:focus{
+        border: 1px solid #F18119;
+        background: white;
+        color: #FF713B;
+    }
+@media (min-width:747px) {
+    body{
+        
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        
+    }
+    header{
+        width: 55%;
+        position: relative;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    main{
+        width: 40%;
+        /* padding: 8em 0; */
+        padding: 12em 0 0 0;
+    }
+    .main-small-p{
+        
+        font-size: 1rem;
+        padding: 0 2em;
+        margin-bottom: 10em;
+    }
+    .header-p1{
+        font-size: .8rem;
+    }
+    .header-p2{
+        position: relative;
+        bottom: 33%;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    header h1 { 
+        padding:0 1.5em;
+        font-size:2.4rem;
+        
+
+    }
+
+}
+/*
+@media (max-width:907px) {
+    .header-p2{
+        position: relative;
+        bottom: 30%;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    form input { 
+        border-radius: 10px;
+        margin: 0 0 .5em 0;
+        border: 2px solid grey;
+        width: 90%;
+        max-width: 250px;
+        text-align: center;
+
+    }
+    .main-small-p{
+        
+        font-size: 0.8rem;
+        padding: 0 1em;
+    }
+    main{
+        padding-bottom: 0;
+    }
+    main form { 
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0 0 0;
+        align-items: center;
+
+    }
+    main{
+        font-size: .9rem;
+    }
+
+
+ }
+ 
+@media (max-width:733px) {
+
+    .header-p2{
+        position: relative;
+        bottom: 15%;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    
+    main form { 
+        margin: 1em 0 0 0;
+
+    }
+}
+@media (max-width:467px) {
+
+    html {
+    
+    font-size: .8rem;
+    
+}
+header h1 { 
+    padding:0 1.5em;
+    font-size:2rem;
+    
+
+}
+} */
